@@ -1,0 +1,24 @@
+{
+  "name": "interview-questions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/assets/scss/style.scss src/assets/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobyBoyne/interview-questions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TobyBoyne/interview-questions/issues"
+  },
+  "homepage": "https://github.com/TobyBoyne/interview-questions#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
