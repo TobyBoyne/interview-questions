@@ -5,3 +5,4 @@ permalink: "/"
 ---
 
 # Welcome
+[All Questions]({{ 'questions/' | url }})
