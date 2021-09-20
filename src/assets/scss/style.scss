@@ -1,5 +1,32 @@
+:root {
+    --clr-bg: lightcyan;
+}
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box
+}
+
+html {
+    font-size: 16px
+}
+
+/* Page Structure */
+
+body {
+    width: 70ch;
+    margin: 0 auto;
+    background-color: var(--clr-bg);
+}
+
+/* Typography */
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, li {
+    font-family: 'Cambria Math', serif;
 }

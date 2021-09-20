@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sugar on Scales | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=/assets/css/style.css>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });"></script>
+</head>
+<body>
+    <a href="/">Home</a>
+<a href="/questions/">All Questions</a>
+<h1>Sugar on Scales</h1>
+<h2>Question</h2>
+<p>Sugar is dropped from rest onto an electric balance from a fixed height $h$, and constant rate $\dot{m}$ without bouncing. The flow of sugar is cut off at the source when the balance shows the <em>exact weight</em> required. What will be the final reading on the scale, once the sugar in the air has settled on the pan?
+<br></p>
+<h2>Hints</h2>
+<p>There are two effects on the reading: the weight of the sugar in the air, and the false reading due to the change in momentum of the falling sugar. Show that these two effects exactly cancel out.
+<br></p>
+<h2>Answer</h2>
+<p>False reading due to change in momentum:<br>
+$$ R = Mg + \dot{m} v $$
+Using suvat (or conservation of energy)
+$$ gh = \frac{1}{2} v^2 $$
+$$ v = \sqrt{2gh} $$
+$$ R = Mg + \dot{m} \sqrt{2gh} $$
+$$ \text{force due to change in momentum} = \dot{m} \sqrt{2gh} $$</p>
+<p>Weight of sugar in the air:<br>
+Let $T$ be the time taken to fall
+$$ \text{mass in air} = M_{air} = \dot{m} T $$
+$$ \text{final velocity} = v = \text{acceleration} * T $$
+$$ \sqrt{2gh} = gT $$
+$$ T = \sqrt{\frac{2h}{g}} $$
+$$ M_{air} = \dot{m} \sqrt{\frac{2h}{g}} $$
+$$ \text{weight in air} = M_{air} g = \dot{m} \sqrt{2gh} $$</p>
+<p>The increase in the reading due to change in momentum is therefore equal to the decrease in the reading due to the weight of sugar still in the air.
+<br></p>
+</body>
+</html>

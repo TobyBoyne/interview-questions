@@ -4,15 +4,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/images");
     eleventyConfig.addPassthroughCopy("./src/assets/css");
 
-    eleventyConfig.addFilter('latex', content => {
-        return content.replace(/\$\$(.+?)\$\$/g, (_, equation) => {
-          const cleanEquation = equation
-            .replace(/&lt;/g, '<')
-            .replace(/&gt;/g, '>')
-      
-          return katex.renderToString(cleanEquation, { throwOnError: false })
-        })
-      })
+    // 11tydata.json files add tags instead of replace them
+    eleventyConfig.setDataDeepMerge(true);
 
     return {
         markdownTemplateEngine: "njk",

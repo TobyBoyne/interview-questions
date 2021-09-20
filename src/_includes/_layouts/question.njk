@@ -3,11 +3,14 @@
 
 {% block heading %}
 <h1>{{ title }}</h1>
+
 {% endblock heading %}
+<h2>Question</h2>
+{% block question %}{% endblock question %} <br>
+<h2>Hints</h2>
 
-{% block question %}{{content | latex | safe}}{% endblock question %} <br>
 {% block hints %}{% endblock hints %} <br>
-{% block answer %}{% endblock answer %} <br>
+<h2>Answer</h2>
 
+{% block answer %}{% endblock answer %} <br>
 {% endblock content %}
-...

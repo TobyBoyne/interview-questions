@@ -1,0 +1,12 @@
+{
+    "physics": "These are physics questions, including topics like mechanics and electrical circuits.",
+
+    "maths": "These questions are purely maths.",
+
+    "short": "These questions are a little simpler (although not necessarily easy!). \n\nIf you are looking for questions to attempt without an interviewer, these are a good place to start.",
+
+    "investigate": "These questions introduce a new topic, and ask a few questions to get a better understanding. These questions are best asked by an interviewer, who can lead you down the right path.",
+
+    "graph": "Graph-drawing questions. <a href='/'>Click here</a> for some general tips on sketching graphs."
+
+}

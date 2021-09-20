@@ -1,14 +1,13 @@
 ---
 title: Lift
 tags: 
-    - question
     - short
 description: "How does an aeroplane generate lift?"
 ---
 {% extends "_layouts/question.njk" %}
 
 {% block question %}
-Q: How does an aeroplane generate lift?
+Q: How does an aeroplane generate lift? $$ lift $$
 {% endblock question %}
 
 {% block hints %}

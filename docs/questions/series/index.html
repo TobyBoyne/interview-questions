@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Series | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=/assets/css/style.css>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });"></script>
+</head>
+<body>
+    <a href="/">Home</a>
+<a href="/questions/">All Questions</a>
+<h1>Series</h1>
+<h2>Question</h2>
+<p>Prove that the sum $ 1 + 2 + 3 + ... + n = \frac{1}{2} n(n+1) $.<br>
+Prove that the sum $ 1^2 + 2^2 + 3^2 + ... + n^2 = \frac{1}{6} n(n+1)(2n+1) $.<br>
+What is the value of $ 1 - x + x^2 - x^3 + ... $?<br>
+<br></p>
+<h2>Hints</h2>
+ <br>
+<h2>Answer</h2>
+<p>Both of these series can be proven with induction. However, the first can also be proven as follows:
+$$ S = 1 + 2 + 3 + ... + (n-2) + (n-1) + n $$
+$$ S = n + (n-1) + (n-2) + ... + 3 + 2 + 1 $$
+$$ S + S = (n+1) + (n-1+2) + (n-2+3) + ... + (n-2+3) + (n-1+2) + (n+1) $$
+$$ 2S = n(n+1) $$
+$$ S = \frac{1}{2} n(n+1) $$</p>
+<p>For the final sum:
+$$ S = 1 - x + x^2 - x^3 + ... $$
+$$ xS = x - x^2 + x^3 - x^4 + ... $$
+$$ S + xS = 1 + (x-x) + (x^2-x^2) + (x^3-x^3) + ... $$
+$$ S + xS = 1 $$
+$$ S = \frac{1}{1+x} $$
+Note that this is only valid for $|x| &lt; 1 $, as we assumed that $x^\infty$ is infinitessimally small. If $|x| &gt; 1 $, then sum is <em>divergent</em> (as it alternates between $\pm \infty $)
+<br></p>
+</body>
+</html>
