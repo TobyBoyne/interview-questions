@@ -1,0 +1,12 @@
+---
+title: All Playlists
+layout: _layouts/base.njk
+permalink: "playlists/"
+---
+
+<h1>All Playlists</h1>
+<ul>   
+    {% for playlist, playlistData in playlists %}
+    <li><a href="{{ playlist | url }}">{{ playlists[playlist].name }}</a></li>
+    {% endfor %}
+</ul>

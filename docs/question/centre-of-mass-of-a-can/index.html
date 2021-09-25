@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Centre of Mass of a Can | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });"></script>
+</head>
+<body>
+    <a href="/interview-questions/">Home</a>
+<a href="/interview-questions/questions/">All Questions</a>
+    <main>
+<h1>Centre of Mass of a Can</h1>
+<div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
+    <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
+    <a class= "badge tag-short" href="/interview-questions/tags/short">short</a>
+</div>
+<h2>Question</h2>
+<p>When drinking a can of a beverage, how much liquid is in the can when the centre of mass is at its lowest? Assume the can has a constant cross-sectional area, and a height of $2H$. Give your answer in terms of $H$, the mass of the can $m$, and the density of the liquid $\rho$.
+<br></p>
+<h2>Hints</h2>
+<p>There are two contributions to the centre of mass - the constant weight of the can itself, and the weight due to mass of the beverage which depends on the remaining volume.
+Initially, the centre of mass is in the middle of the can. After drinking all of the beverage, the centre of mass is in the middle of the can.
+<br></p>
+<h2>Answer</h2>
+<p>The equation for the centre of mass is given by
+$$Total mass*\bar{x}=\sum$$
+In this case,
+$$(m+x\rho)\bar{x}=mH+\frac{1}{2}\rho x^2$$
+You can find the minimum value of $\bar{x}$ via differentiation. However, another method is to notice that the minimum occurs at $\bar{x}=x$ - when the top of the fluid is in line with the CoM. This is because, at this point:</p>
+<ul>
+<li>Increasing $x$ will bring more mass above the CoM, raising $\bar{x}$</li>
+<li>Decreasing $x$ will reduce the amount of mass that is below the CoM, raising $\bar{x}$</li>
+</ul>
+<p>Therefore, just substitute $x=\bar{x}$ into the equation above to get a quadratic in $\bar{x}$, the (positive) solution to which is</p>
+<p>$$ x=\frac{-m-\sqrt{m^2 +2\rho mH}}{\rho} $$
+<br></p>
+</body>
+</html>

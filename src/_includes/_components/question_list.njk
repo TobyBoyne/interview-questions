@@ -1,5 +1,5 @@
 {% for question in questions %}
-<h2><a href="{{ question.url }}">{{question.data.title}}</a></h2>
+<h2><a href="{{ question.url | url }}">{{question.data.title}}</a></h2>
 <p>{{question.data.description}}</p>
 <br>
 {% endfor %}

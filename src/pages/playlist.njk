@@ -1,0 +1,21 @@
+---
+layout: "_layouts/base.njk"
+pagination:
+  data: playlists
+  size: 1
+  alias: playlist
+  filter:
+    - all
+    - question
+permalink: /playlists/{{ playlist }}/
+eleventyComputed:
+  title: Playlist "{{ playlists[playlist].name }}"
+---
+<h1>Playlist “<span class="title-playlist">{{ playlists[playlist].name }}</span>”</h1>
+<p>{{ playlists[playlist].description | safe }}</p>
+<ol>
+{% set questions = collections[ playlist ] %}
+{% for question in questions %}
+  <li><a href="{{ question.url | url }}">{{ question.data.title }}</a></li>
+{% endfor %}
+</ol>

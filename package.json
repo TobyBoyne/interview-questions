@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass src/assets/scss/style.scss src/assets/css/style.css --watch"
+    "sass": "sass src/assets/scss/style.scss src/assets/css/style.css --watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy --pathprefix=interview-questions"
   },
   "repository": {
     "type": "git",

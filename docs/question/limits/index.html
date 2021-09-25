@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Limits | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });"></script>
+</head>
+<body>
+    <a href="/interview-questions/">Home</a>
+<a href="/interview-questions/questions/">All Questions</a>
+    <main>
+<h1>Limits</h1>
+<div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
+    <a class= "badge tag-maths" href="/interview-questions/tags/maths">maths</a>
+    <a class= "badge tag-short" href="/interview-questions/tags/short">short</a>
+</div>
+<h2>Question</h2>
+<p>Evaluate the following limits:
+$$ \lim_{x \to \infty} e^{-x} $$
+$$ \lim_{x \to \infty} xe^{-x} $$
+$$ \lim_{x \to \infty} x!e^{-x} $$<br>
+Where $x!$ is the factorial of $x$, i.e. $x*(x-1)*(x-2)*(x-3)*...*3*2*1$
+<br></p>
+<h2>Hints</h2>
+<p>For limits that are the product of two terms, think about whether one term grows faster than the other term shrinks. As we are looking at the limit as $x$ approaches inifinity, consider what happens for <em>large</em> values of $x$.
+<br></p>
+<h2>Answer</h2>
+<p>$$ \lim_{x \to \infty} e^{-x} = 0 $$
+$$ \lim_{x \to \infty} xe^{-x} = 0$$
+$$ \lim_{x \to \infty} x!e^{-x} = \infty $$<br>
+For the last limit, consider large values of $x$ - for example, $x=100$. Then, compare to $x=101$.
+$$ 101!e^{-101} = 101 e^{-1} * 100!e^{-100} &gt; 100!e^{-100} $$
+This pattern follows for larger values of $x$, and so the function is strictly increasing, and will approach infinity as $x$ approaches infinity.
+<br></p>
+</body>
+</html>

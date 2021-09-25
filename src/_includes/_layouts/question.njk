@@ -4,6 +4,12 @@
 {% block heading %}
 <h1>{{ title }}</h1>
 
+<div class="tags">
+    {%- for tag in tags -%}
+    <a class= "badge tag-{{tag}}" href="{{'/tags/' | url}}{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+</div>
+
 {% endblock heading %}
 <h2>Question</h2>
 {% block question %}{% endblock question %} <br>

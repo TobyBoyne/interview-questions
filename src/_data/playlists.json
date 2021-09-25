@@ -1,0 +1,15 @@
+{
+    "engineering-one":
+    {
+        "name": "Engineering One",
+        "description": "Engineering questions - mix of physics and maths. Typical interview structure",
+        "questions": ["Resistors and Springs", "Lift",  "Newton's Cradle", "Rocket Acceleration", "Series", "Nested Sine"]
+    },
+
+    "maths-investigation":
+    {
+        "name": "Maths Investigation",
+        "description": "Set of difficult questions investigating maths topics",
+        "questions": ["Nested Sine", "Jacobian"]
+    }
+}

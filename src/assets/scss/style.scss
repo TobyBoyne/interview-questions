@@ -16,9 +16,15 @@ html {
 /* Page Structure */
 
 body {
-    width: 70ch;
-    margin: 0 auto;
     background-color: var(--clr-bg);
+}
+
+main {
+    width: 100ch;
+    margin: 0 auto;
+    padding-block: 2em;
+    padding-inline: 5em;
+    background-color: white
 }
 
 /* Typography */
@@ -29,4 +35,40 @@ h1, h2, h3 {
 
 p, li {
     font-family: 'Cambria Math', serif;
+}
+
+/* Components */
+
+.badge {
+    background-color: var(--badge-clr, black);
+    color: white;
+    display: inline;
+    padding: 5px;
+
+    outline: var(--badge-clr, black) solid 1px;
+    outline-offset: 1px;
+}
+
+.badge + .badge {
+    margin-left: 1em
+}
+
+.title-tag {
+    color: var(--badge-clr, black);
+}
+
+.tag-short {
+    --badge-clr: royalblue;
+}
+
+.tag-investigate {
+    --badge-clr: darkred;
+}
+
+.tag-graph {
+    --badge-clr: darkgreen;
+}
+
+.tag-calculus {
+    --badge-clr: chocolate;
 }
