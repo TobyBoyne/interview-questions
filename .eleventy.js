@@ -3,6 +3,7 @@ const katex = require('katex')
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/images");
     eleventyConfig.addPassthroughCopy("./src/assets/css");
+    eleventyConfig.addPassthroughCopy("./src/assets/js");
 
     // 11tydata.json files add tags instead of replace them
     eleventyConfig.setDataDeepMerge(true);

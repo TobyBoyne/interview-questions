@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,20 +25,33 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Centre of Mass of a Can</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
     <a class= "badge tag-short" href="/interview-questions/tags/short">short</a>
 </div>
-<h2>Question</h2>
-<p>When drinking a can of a beverage, how much liquid is in the can when the centre of mass is at its lowest? Assume the can has a constant cross-sectional area, and a height of $2H$. Give your answer in terms of $H$, the mass of the can $m$, and the density of the liquid $\rho$.
-<br></p>
-<h2>Hints</h2>
+<div class="question">
+    <h2>Question</h2>
+<p>When drinking a can of a beverage, how much liquid is in the can when the centre of mass is at its lowest? Assume the can has a constant cross-sectional area, and a height of $2H$. Give your answer in terms of $H$, the mass of the can $m$, and the density of the liquid $\rho$.</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
 <p>There are two contributions to the centre of mass - the constant weight of the can itself, and the weight due to mass of the beverage which depends on the remaining volume.
-Initially, the centre of mass is in the middle of the can. After drinking all of the beverage, the centre of mass is in the middle of the can.
-<br></p>
-<h2>Answer</h2>
+Initially, the centre of mass is in the middle of the can. After drinking all of the beverage, the centre of mass is in the middle of the can.</p>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
 <p>The equation for the centre of mass is given by
 $$Total mass*\bar{x}=\sum$$
 In this case,
@@ -48,7 +62,11 @@ You can find the minimum value of $\bar{x}$ via differentiation. However, anothe
 <li>Decreasing $x$ will reduce the amount of mass that is below the CoM, raising $\bar{x}$</li>
 </ul>
 <p>Therefore, just substitute $x=\bar{x}$ into the equation above to get a quadratic in $\bar{x}$, the (positive) solution to which is</p>
-<p>$$ x=\frac{-m-\sqrt{m^2 +2\rho mH}}{\rho} $$
-<br></p>
+<p>$$ x=\frac{-m-\sqrt{m^2 +2\rho mH}}{\rho} $$</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,21 +25,34 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Packing Efficiency</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
     <a class= "badge tag-investigate" href="/interview-questions/tags/investigate">investigate</a>
 </div>
-<h2>Question</h2>
-<p>Packing efficiency is defined as the percentage of space that is filled by an object as a percentage of the total available space. What is the packing efficiency of a box full of cylinders? A box full of spheres?
-<br></p>
-<h2>Hints</h2>
+<div class="question">
+    <h2>Question</h2>
+<p>Packing efficiency is defined as the percentage of space that is filled by an object as a percentage of the total available space. What is the packing efficiency of a box full of cylinders? A box full of spheres?</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
 <p>To find the packing efficiency for an object, consider a small tile that can be infinitely repeated. An example of this might be a circle in the middle of a square. This has a tiling efficiency of $\frac{A_{circle}}{A_{square}}=\frac{\pi r^2}{4r^2}=\frac{\pi}{4}$. However, this isn't the most efficient packing of circles in a grid.<br>
 For cylinders, simplify to a 2D case - what is the packing efficiency of a circle?<br>
-For spheres, look up &quot;Face Centred Cubic&quot; to have an idea of what the packing would look like
-<br></p>
-<h2>Answer</h2>
+For spheres, look up &quot;Face Centred Cubic&quot; to have an idea of what the packing would look like</p>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
 <p>Cylinder packing: Consider triangle made up of joining centres of 3 touching circles
 $$A_{triangle}=\frac{1}{2} (2R)^2 \sin⁡(60)$$
 $$A_{circle}=\frac{180}{360} \pi R^2$$
@@ -48,7 +62,11 @@ $$V_{sphere}=4∗\frac{4}{3} \pi R^3$$
 Pythagoras:
 $$a=2\sqrt{2} R$$
 $$V_{cube}=16\sqrt{2} R$$
-$$V_{sphere}/V_{cube} = 74.1 \% $$
-<br></p>
+$$V_{sphere}/V_{cube} = 74.1 \% $$</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

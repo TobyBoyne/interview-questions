@@ -8,13 +8,14 @@ description: "Prove some common series equations."
 {% extends "_layouts/question.njk" %}
 
 {% block question %}
-Prove that the sum $ 1 + 2 + 3 + ... + n = \frac{1}{2} n(n+1) $.  
-Prove that the sum $ 1^2 + 2^2 + 3^2 + ... + n^2 = \frac{1}{6} n(n+1)(2n+1) $.  
-What is the value of $ 1 - x + x^2 - x^3 + ... $?  
+ 1. Prove that the sum $ 1 + 2 + 3 + ... + n = \frac{1}{2} n(n+1) $.  
+ 2. Prove that the sum $ 1^2 + 2^2 + 3^2 + ... + n^2 = \frac{1}{6} n(n+1)(2n+1) $.  
+ 3. What is the value of $ 1 - x + x^2 - x^3 + ... $?  
 {% endblock question %}
 
 {% block hints %}
-
+The first two equations can be proved using induction, but there is an alternate method to proving the first one.    
+You can solve (3) with standard results of a geometric progression, but it can also be solved in a similar fashion to (1). 
 {% endblock hints %}
 
 {% block answer %}

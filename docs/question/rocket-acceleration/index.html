@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,20 +25,33 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Rocket Acceleration</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
     <a class= "badge tag-calculus" href="/interview-questions/tags/calculus">calculus</a>
 </div>
-<h2>Question</h2>
-<p>A rocket of initial combined mass (mass of the rocket + fuel) $m_0$ is at rest. At time $t=0$, the rocket begins ejecting fuel downwards at a speed of $u$ relative to the rocket, and a mass flow rate of $\dot{m}$. Find the forces acting on the rocket, and find the velocity $v$ at time $t$ as a function of the variables defined above, and the gravitational constant $g$.
-<br></p>
-<h2>Hints</h2>
+<div class="question">
+    <h2>Question</h2>
+<p>A rocket of initial combined mass (mass of the rocket + fuel) $m_0$ is at rest. At time $t=0$, the rocket begins ejecting fuel downwards at a speed of $u$ relative to the rocket, and a mass flow rate of $\dot{m}$. Find the forces acting on the rocket, and find the velocity $v$ at time $t$ as a function of the variables defined above, and the gravitational constant $g$.</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
 <p>The mass of the rocket at time $t$ is the initial mass, take away the ejected fuel: $m=m_0-\dot{m}t$.<br>
-The thrust of the rocket is created due to the change in momentum of the fuel, which is accelerated from rest (relative to the rocket) to a speed $u$.
-<br></p>
-<h2>Answer</h2>
+The thrust of the rocket is created due to the change in momentum of the fuel, which is accelerated from rest (relative to the rocket) to a speed $u$.</p>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
 <p>Balancing forces:
 $$ \text{thrust} = F = \text{change in momentum of fuel} = \dot{m} u $$
 $$ \text{weight} = W = mg $$
@@ -49,7 +63,11 @@ $$ \frac{\dot{m} u}{m_0 - \dot{m} t} - g = \frac{dv}{dt} $$<br>
 Here, we have an expression for the acceleration as a function of time. To find the velocity as a function of time, we need to integrate this expression by seperating the variables, and then integrating from the initial condition ($v=0$ at $t=0$ as starting from rest), up to the condition we are looking for ($v=v$ at $t=t$).<br>
 $$ \int_{0}^{t} \frac{\dot{m} u}{m_0 - \dot{m} t} - g \, dt = \int_{0}^{v} dv $$
 $$ [-u \ln(m_0 - \dot{m} t) - gt]_{0}^{t} = v $$
-$$ v = u \ln\left( \frac{m_0}{m_0-\dot{m} t} \right) - gt $$
-<br></p>
+$$ v = u \ln\left( \frac{m_0}{m_0-\dot{m} t} \right) - gt $$</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

@@ -6,7 +6,7 @@ permalink: "contributing/"
 
 Please help by providing new questions, improving explanations, or creating diagrams.
 
-To help, create a pull request on the GitHub page for this site.
+To help, create a pull request on the [GitHub page](https://github.com/TobyBoyne/interview-questions/) for this site, or create an [issue](https://github.com/TobyBoyne/interview-questions/issues) if you aren't comfortable with using git.
 
 Current to-do list:
  - scss style

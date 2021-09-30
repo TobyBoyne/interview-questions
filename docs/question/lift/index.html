@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,19 +25,43 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Lift</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
     <a class= "badge tag-short" href="/interview-questions/tags/short">short</a>
 </div>
-<h2>Question</h2>
-<p>Q: How does an aeroplane generate lift? $$ lift $$
-<br></p>
-<h2>Hints</h2>
- <br>
-<h2>Answer</h2>
-<p>There are two main mechanisms
-<br></p>
+<div class="question">
+    <h2>Question</h2>
+<p>How does an aeroplane generate lift?</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
+<p>In order for lift to be generated, a force must be acting upwards on the plane. Where is this force located on the plane, and where does it come from?</p>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
+<p>There are two main mechanisms that lead to the generation of lift:</p>
+<ul>
+<li>the angle of the wing deflects air downwards, therefore imposing a force on the air. By Newton's Third Law, there must be an equal and opposite force acting upwards on the wing of the plane, creating lift.</li>
+<li>the wing curves the path of the air. This leads to an area of higher pressure below the wing, with the pressure difference causing a net force upwards.</li>
+</ul>
+<p>You aren't expected to know the cause of this pressure effect. Essentially, it arises as there is a centripetal force acting on the air particles in order to curve the path of the motion around the wing. This force is caused by a pressure gradient, leading to a region of low pressure just underneath the wing. This is an interesting topic to look further into, and there are many good articles online investigating this effect!</p>
+<p>A commonly believed myth is that the air on top of and below the wing reach the tip of the wing at the same time. This is not true, as shown by <a href="https://www.cam.ac.uk/research/news/how-wings-really-work">this video</a>.</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,20 +25,33 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Area under a Curve</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-maths" href="/interview-questions/tags/maths">maths</a>
     <a class= "badge tag-short" href="/interview-questions/tags/short">short</a>
 </div>
-<h2>Question</h2>
-<p>Find the area of the region enclosed between the axes, the line $y=c−x$, and the unit square (i.e. a square with corners $(0, 0), (0,1), (1,1), (1,0)$)
-<br></p>
-<h2>Hints</h2>
+<div class="question">
+    <h2>Question</h2>
+<p>Find the area of the region enclosed between the axes, the line $y=c−x$, and the unit square (i.e. a square with corners $(0, 0), (0,1), (1,1), (1,0)$)</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
 <p>Consider the different cases. For example, below is shown the case where $ 1 &lt; c &lt; 2 $:</p>
 <p><img src="/assets/images/area-under-curve-case2.png" alt="Area under curve; case where 1 &lt; c &lt; 2"></p>
- <br>
-<h2>Answer</h2>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
 <p>There are 4 cases. These are summarised below:
 $$
 A = \begin{cases}
@@ -46,7 +60,11 @@ A = \begin{cases}
 1 - \frac{1}{2} (2-c)^2 &amp;\text{if } 1 &lt; c \leq 2 \\
 1 &amp;\text{if } c &gt; 2
 \end{cases}
-$$
-<br></p>
+$$</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

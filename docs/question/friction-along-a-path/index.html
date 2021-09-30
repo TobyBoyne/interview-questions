@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
@@ -24,36 +25,53 @@
 <body>
     <a href="/interview-questions/">Home</a>
 <a href="/interview-questions/questions/">All Questions</a>
-    <main>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
 <h1>Friction along a Path</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tags/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tags/physics">physics</a>
 </div>
-<h2>Question</h2>
+<div class="question">
+    <h2>Question</h2>
 <ol>
 <li>Sketch a graph of the friction, $F$, acting on a particle on a rough surface as a function of the applied force, $T$</li>
 <li>A ball is projected on a smooth, flat plane with initial velocity $u$. The ball is subject to a drag force proportional to its velocity, $F=\lambda v$. How long will it take the ball to come to rest? Let $\mu$ be the coefficient of friction between the particle and the surface.</li>
 <li>A ball travels from point $P$ to $Q$ (where $Q$ is lower than $P$) along a rough, straight slope with coefficient of friction $\mu$ (released from rest). How much work is done against friction?
 <ul>
 <li>derive an expression fo the velocity of the ball at $Q$. Hence find the ratio of $\frac{y}{x}$ such that the ball does not move from rest.</li>
-<li>consider a path that is not a straight line between $P$ and $Q$. Would the previous calculation still apply? If not, why?
-<br></li>
+<li>consider a path that is not a straight line between $P$ and $Q$. Would the previous calculation still apply? If not, why?</li>
 </ul>
 </li>
 </ol>
-<h2>Hints</h2>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
 <ol>
 <li></li>
 <li>Using the chain rule, $$a=\frac{dv}{dt}=\frac{dv}{dr}*\frac{dr}{dt}=v*\frac{dv}{dt}$$</li>
-<li>Consider the forces acting on a particle moving on a curved path. Are there any additional forces as compared to a straight path? Would this affect the energy balance of the system?
-<br></li>
+<li>Consider the forces acting on a particle moving on a curved path. Are there any additional forces as compared to a straight path? Would this affect the energy balance of the system?</li>
 </ol>
-<h2>Answer</h2>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
 <ol>
 <li></li>
 <li>Infinite time, $\frac{\lambda}{\mu}$ distance</li>
-<li>Work done is $mgx\mu$. Ratio is $\mu$.
-<br></li>
+<li>Work done is $mgx\mu$. Ratio is $\mu$.</li>
 </ol>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
 </body>
 </html>

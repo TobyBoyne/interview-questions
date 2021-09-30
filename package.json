@@ -22,6 +22,7 @@
   "homepage": "https://github.com/TobyBoyne/interview-questions#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "jquery": "^3.6.0",
     "katex": "^0.13.18"
   }
 }

@@ -6,6 +6,13 @@
         "questions": ["Resistors and Springs", "Lift",  "Newton's Cradle", "Rocket Acceleration", "Series", "Nested Sine"]
     },
 
+    "engineering-two":
+    {
+        "name": "Engineering Two",
+        "description": "Engineering questions - mix of physics and maths. Typical interview structure",
+        "questions": []
+    },
+
     "maths-investigation":
     {
         "name": "Maths Investigation",

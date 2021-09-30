@@ -1,5 +1,5 @@
 {% extends "_layouts/base.njk" %}
-{% block content %}
+{%- block content -%}
 
 {% block heading %}
 <h1>{{ title }}</h1>
@@ -11,12 +11,31 @@
 </div>
 
 {% endblock heading %}
-<h2>Question</h2>
-{% block question %}{% endblock question %} <br>
-<h2>Hints</h2>
 
-{% block hints %}{% endblock hints %} <br>
-<h2>Answer</h2>
+<div class="question">
+    <h2>Question</h2>
+    {% block question %}{% endblock question %}
+</div> <br>
 
-{% block answer %}{% endblock answer %} <br>
-{% endblock content %}
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
+        {% block hints %}{% endblock hints %}
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
+        {% block answer %}{% endblock answer %}
+</div>
+</div>
+
+
+<link rel="stylesheet" href="{{ '/assets/css/accordion.css' | url }}">
+<script src="{{ '/assets/js/accordion.js' | url }}"></script>
+{%- endblock content -%}
