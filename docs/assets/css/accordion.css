@@ -18,7 +18,7 @@
 .accordion-panel {
   padding: 0 18px;
   background-color: white;
-  display: block;
+  display: none;
   overflow: hidden;
 }
 
