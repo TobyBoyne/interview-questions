@@ -1,21 +1,13 @@
 ---
 layout: "_layouts/base.njk"
-pagination:
-  data: tagsList
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - question
-permalink: /tags/{{ tag }}/
-eleventyComputed:
-  title: Tag "{{ tag }}"
+permalink: /tags/
+title: Tags
 ---
-<h1>Tagged “<span class="title-tag">{{ tag }}</span>”</h1>
-<p>{{ tagsList[tag] | safe }}</p>
-<ol>
-{% set taglist = collections[ tag ] %}
-{% for question in taglist | reverse %}
-  <li><a href="{{ question.url | url }}">{{ question.data.title }}</a></li>
+<h1>All Tags</h1>
+<ul>
+{% set tagslist = tagsList %}
+{{tagslist|log}}
+{% for tag, tagdata in tagslist %}
+  <a class="badge tag-{{tag}}" href="{{ '/tag/' | url }}{{ tag }}">{{ tag }}</a>
 {% endfor %}
-</ol>
+</ul>

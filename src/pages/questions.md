@@ -9,10 +9,10 @@ pagination:
 ---
 # All Questions
 
-[First]({{pagination.href.first}})
-[Previous]({{pagination.href.previous}})
-[Next]({{pagination.href.next}})
-[Last]({{pagination.href.last}})
+[First]({{pagination.href.first | url}})
+[Previous]({{pagination.href.previous | url}})
+[Next]({{pagination.href.next | url}})
+[Last]({{pagination.href.last | url}})
 
 
 {% include "_components/question_list.njk"%}
