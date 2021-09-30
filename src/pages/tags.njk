@@ -6,7 +6,6 @@ title: Tags
 <h1>All Tags</h1>
 <ul>
 {% set tagslist = tagsList %}
-{{tagslist|log}}
 {% for tag, tagdata in tagslist %}
   <a class="badge tag-{{tag}}" href="{{ '/tag/' | url }}{{ tag }}">{{ tag }}</a>
 {% endfor %}

@@ -30,7 +30,7 @@ h1, h2, h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-p, li {
+p, li, th, td {
   font-family: "Cambria Math", serif;
 }
 

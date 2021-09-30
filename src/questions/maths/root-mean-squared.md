@@ -1,7 +1,5 @@
 ---
 title: Root Mean Squared
-tags:
-    -
 description: "Find an expression for the root mean sqaure of a sine wave."
 ---
 {% extends "_layouts/question.njk" %}

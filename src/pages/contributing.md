@@ -19,3 +19,27 @@ Current to-do list:
    - 'Acceleration in Polar Coordinates'
    - 'Area under Curve'
    - 'Nested Sine'
+
+
+ Question | Answer | Images
+-- | -- | --
+Centre of Mass of a Can | ✓ | x
+Ring of Charge | x | x
+Packing Efficiency | ✓ | x
+Car Driving Up a Hill | x | x
+Sugar on Scales | ✓ | x
+Acceleration in Polar Coordinates | x | x
+Power Matching | ✓ | x
+Rocket Acceleration | ✓ | x
+Limits | ✓ | -
+Length of a Curve | ✓ | x
+Area under a Curve | x | x
+Root Mean Squared | x | x
+Jacobian | x | x
+Friction Along a Path | x | x
+Nested Sine | ✓ | x
+Braking Distance | x | x
+Resistors and Springs | ✓ | x
+Lift | ✓ | x
+Newton's Cradle | ✓ | x
+Series | ✓ | -
