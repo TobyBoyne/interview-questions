@@ -18,7 +18,7 @@ Note that for all three of these graphs, $y(-x)=-y(x)$. This means that they are
 {% endblock hints %}
 
 {% block answer %}
-![Graph of sin(sin(x))](/assets/images/nested-sine.png)
+{% diagram "nested-sine" %}
 There are a few ways to approach this question. The simplest is to realise that the value of $\sin(x)$ is between $0$ and $1$ for all values of $x$. For a small $\theta$, $\sin(\theta)\approx \theta$. This is approximately valid for $-1 < \theta < 1$, which means that the curve $\sin(\sin(x))$ will look approximately like a sine curve. There will be some 'squashing' for larger values of $\sin(x)$, so the maxima will only reach a height of $\sin(1)=0.84$.
 
 For the final curve, first differentiate to get

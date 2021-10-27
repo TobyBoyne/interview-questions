@@ -1,71 +1,60 @@
 :root {
-  --clr-bg: lightcyan;
-}
+  --clr-bg: lightcyan; }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 /* Page Structure */
 body {
-  background-color: var(--clr-bg);
-}
+  background-color: var(--clr-bg); }
 
 main {
   width: 100ch;
   margin: 0 auto;
   padding-block: 2em;
   padding-inline: 5em;
-  background-color: white;
-}
+  background-color: white; }
 
 /* Typography */
 h1, h2, h3 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 p, li, th, td {
-  font-family: "Cambria Math", serif;
-}
+  font-family: 'Cambria Math', serif; }
 
 /* Components */
+.diagram {
+  display: block; }
+
 .badge {
   background-color: var(--badge-clr, black);
   color: white;
   display: inline;
   padding: 5px;
   outline: var(--badge-clr, black) solid 1px;
-  outline-offset: 1px;
-}
+  outline-offset: 1px; }
 
 .badge + .badge {
-  margin-left: 1em;
-}
+  margin-left: 1em; }
 
 .title-tag {
-  color: var(--badge-clr, black);
-}
+  color: var(--badge-clr, black); }
 
 .tag-short {
-  --badge-clr: royalblue;
-}
+  --badge-clr: royalblue; }
 
 .tag-investigate {
-  --badge-clr: darkred;
-}
+  --badge-clr: darkred; }
 
 .tag-graph {
-  --badge-clr: darkgreen;
-}
+  --badge-clr: darkgreen; }
 
 .tag-calculus {
-  --badge-clr: chocolate;
-}
+  --badge-clr: chocolate; }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass src/assets/scss/style.scss src/assets/css/style.css --watch",
+    "sass": "sass --watch src/assets/scss/style.scss:src/assets/css/style.css",
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy --pathprefix=interview-questions"
   },
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/TobyBoyne/interview-questions#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "d3": "^7.1.1",
     "jquery": "^3.6.0",
     "katex": "^0.13.18"
   }

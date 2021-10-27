@@ -1,26 +1,14 @@
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     /* Toggle between adding and removing the "active" class,
-//     to highlight the button that controls the panel */
-//     this.classList.toggle("active");
-
-//     /* Toggle between hiding and showing the active panel */
-//     var panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//     } else {
-//       panel.style.display = "block";
-//     }
-//   });
-// }
-
-const acc = $('.accordion')
+const acc = d3.selectAll('.accordion')
 acc.on("click", function () {
-    $(this).toggleClass('active')
+    let isActive = !d3.select(this).classed("active")
+    d3.select(this).classed('active', isActive)
+    // let panel = d3.select(this.parentNode).selectAll('.accordion-panel')
     let panel = $(this).parent().find('.accordion-panel')
-
     panel.slideToggle()
 })
+
+// for debugging - automatically open all panels
+acc.each(function(d, i) {
+    var onClickFunc = d3.select(this).on("click");
+    onClickFunc.apply(this, [d, i]);
+});        

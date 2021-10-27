@@ -39,6 +39,10 @@ p, li, th, td {
 
 /* Components */
 
+.diagram {
+    display: block;
+}
+
 .badge {
     background-color: var(--badge-clr, black);
     color: white;
