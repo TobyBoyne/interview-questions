@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mechanical-Electrical Analogies | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/interview-questions/assets/css/style.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/interview-questions/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/interview-questions/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/interview-questions/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/interview-questions/favicon/manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });"></script>
+</head>
+<body>
+    <a href="/interview-questions/">Home</a>
+<a href="/interview-questions/questions/">All Questions</a>
+<a href="/interview-questions/playlists/">Playlists</a>
+<a href="/interview-questions/tags/">All Tags</a>
+<a href="/interview-questions/contributing/">Contributing</a>
+<main>
+<h1>Mechanical-Electrical Analogies</h1>
+<div class="tags"><a class= "badge tag-question" href="/interview-questions/tag/question">question</a>
+    <a class= "badge tag-physics" href="/interview-questions/tag/physics">physics</a>
+    <a class= "badge tag-investigate" href="/interview-questions/tag/investigate">investigate</a>
+</div>
+<div class="question">
+    <h2>Question</h2>
+<p>What is the equation governing the behaviour of a capacitor, that relates the current passing
+through it to the voltage across it?</p>
+<p>What is the purpose of the circuit below? The input $v_{\text{in} }$ is an AC wave, which takes a value
+$v_{\text{in} }=\sin(\omega t)$, where $\omega$ is the frequency of the input.</p>
+<p><img src="/interview-questions/assets/images/lowpass-filter.png" alt="Circuit diagram"></p>
+<p>Electrical systems can be compared to mechanical systems. For this comparison, voltage (the 'effort
+variable') can be transformed to force, and current (the 'flow variable') can be transformed to
+velocity.
+What are the equivalent components for a mechanical system for a resistor and a capacitor?</p>
+<p>What would be an equivalent mechanical circuit? Where would this be used?</p>
+</div> <br>
+<div class="hints">
+    <div class="accordion">
+        <h2>Hints</h2>
+    </div>
+    <div class="accordion-panel">
+<p>For a capacitor, $ I = C \frac{dV}{dt} $</p>
+<p>There are a few ways you can approach this question:</p>
+<ul>
+<li>find an expression for $v_{\text{out} }$</li>
+<li>consider the extreme cases where $\omega=0$ and $\omega$ is very large</li>
+<li>think about how the capacitor charges when the voltage steps from 0 to a constant. Then,
+think about the input switching on and off, alternating between discharging and charging. What
+happens when the rate of switching increases?</li>
+</ul>
+</div>
+</div>
+<br>
+<div class="answer">
+    <div class="accordion">
+        <h2>Answer</h2>
+    </div>
+    <div class="accordion-panel">
+<p>The voltage across $R$ is given by $IR$ (Ohm's law), as the current through the capacitor is equal
+to the current through the resistor.</p>
+<p>If $\omega$ is small, then $I$ is small, and the voltage across the resistor, $v_{R}$, is small.
+This means that $$v_{\text{out} } = v_{\text{in} } - v_{R} \approx v_{\text{in} }$$</p>
+<p>Conversely, for a large $\omega$, $I$ and $v_{R}$ are both large, and so the value of $v_{\text{out} }$
+is small.</p>
+<p>The circuit is therefore a <strong>lowpass filter</strong>. Signals at small frequencies are able to easily pass
+through, whereas large frequencies are reduced to zero. This can be useful in radios, for example,
+where only signals below a certain frequency are wanted, and high frequency noise is to be
+removed.</p>
+<p>Resistors have the form $V=IR$, where the component resists flow of current. An equivalent
+component is a damper, where $F=\lambda v$, where an force resists the velocity.<br>
+Capacitors behave as $ I = C \frac{dV}{dt} $. Transforming the variables to $ v = A \frac{dF}{dt} $.
+Integrating both sides gives $ F = k x $, which is Hooke's law for a spring. Capacitors are
+therefore equivalent to springs when transforming from electrical to mechanical systems.</p>
+<p>An example of a mechanical lowpass filter is a suspension system in a car, which uses a spring.</p>
+<p>For further reading, see <a href="https://en.wikipedia.org/wiki/Mechanical%E2%80%93electrical_analogies">this Wikipedia article</a></p>
+<p>Also, have a look at <a href="/interview-questions/question/resistors-and-springs/">this question about resistors and springs</a>
+to further investigate how these systems can be compared.</p>
+</div>
+</div>
+<link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
+<script src="/interview-questions/assets/js/accordion.js"></script>
+</main>
+</body>
+</html>

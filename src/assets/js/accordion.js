@@ -8,7 +8,7 @@ acc.on("click", function () {
 })
 
 // for debugging - automatically open all panels
-acc.each(function(d, i) {
-    var onClickFunc = d3.select(this).on("click");
-    onClickFunc.apply(this, [d, i]);
-});        
+// acc.each(function(d, i) {
+//     var onClickFunc = d3.select(this).on("click");
+//     onClickFunc.apply(this, [d, i]);
+// });        
