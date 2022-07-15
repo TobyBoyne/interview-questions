@@ -1,5 +1,33 @@
-<a href="{{'/' | url}}">Home</a>
-<a href="{{'/questions/' | url}}">All Questions</a>
-<a href="{{'/playlists/' | url}}">Playlists</a>
-<a href="{{'/tags/' | url}}">All Tags</a>
-<a href="{{'/contributing/' | url}}">Contributing</a>
+{% set navs = [
+    {
+        name: 'Home',
+        url: '/',
+    },
+    {
+        name: 'All Questions',
+        url: '/questions/',
+    },
+    {
+        name: 'Playlists',
+        url: '/playlists/',
+    },
+    {
+        name: 'All Tags',
+        url: '/tags/',
+    },
+    {
+        name: 'Contributing',
+        url: '/contributing/',
+    }
+] %}
+
+<nav class="site-nav">
+    {# <a href="{{'/' | url}}">Home</a>
+    <a href="{{'/questions/' | url}}" class="{{'active' if page.url == '/questions/'}}">All Questions</a>
+    <a href="{{'/playlists/' | url}}">Playlists</a>
+    <a href="{{'/tags/' | url}}">All Tags</a>
+    <a href="{{'/contributing/' | url}}">Contributing</a> #}
+    {% for nav in navs %}
+        <a href="/">Here!</a>
+    {% endfor %}
+</nav>

@@ -27,6 +27,27 @@ main {
     background-color: white
 }
 
+/* Header */
+
+.site-nav {
+    display: flex;
+    width: 100%;
+    height: 3em;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: slateblue;
+    a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    a.active {
+        background-color: black;
+    }
+}
+
 /* Typography */
 
 h1, h2, h3 {

@@ -1,7 +1,8 @@
 ---
-title: Area under a Curve
+title: Area in the Unit Square
 tags:
     - short
+    - graph
 description: "Find the area of a region in a unit square."
 ---
 {% extends "_layouts/question.njk" %}
