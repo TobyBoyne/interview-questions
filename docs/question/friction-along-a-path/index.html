@@ -29,11 +29,13 @@
         });"></script>
 </head>
 <body>
-    <a href="/interview-questions/">Home</a>
-<a href="/interview-questions/questions/">All Questions</a>
-<a href="/interview-questions/playlists/">Playlists</a>
-<a href="/interview-questions/tags/">All Tags</a>
-<a href="/interview-questions/contributing/">Contributing</a>
+<nav class="site-nav">
+<p><a href="/interview-questions/" class=""> Home </a></p>
+<p><a href="/interview-questions/questions/" class=""> All Questions </a></p>
+<p><a href="/interview-questions/playlists/" class=""> Playlists </a></p>
+<p><a href="/interview-questions/tags/" class=""> All Tags </a></p>
+<p><a href="/interview-questions/contributing/" class=""> Contributing </a></p>
+</nav>
 <main>
 <h1>Friction along a Path</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tag/question">question</a>
@@ -43,7 +45,7 @@
     <h2>Question</h2>
 <ol>
 <li>Sketch a graph of the friction, $F$, acting on a particle on a rough surface as a function of the applied force, $T$</li>
-<li>A ball is projected on a smooth, flat plane with initial velocity $u$. The ball is subject to a drag force proportional to its velocity, $F=\lambda v$. How long will it take the ball to come to rest? Let $\mu$ be the coefficient of friction between the particle and the surface.</li>
+<li>A ball is projected on a smooth, flat plane with initial velocity $u$. The ball is subject to a drag force proportional to its velocity, $F=\lambda v$. How long will it take the ball to come to rest?</li>
 <li>A ball travels from point $P$ to $Q$ (where $Q$ is lower than $P$) along a rough, straight slope with coefficient of friction $\mu$ (released from rest). How much work is done against friction?
 <ul>
 <li>derive an expression fo the velocity of the ball at $Q$. Hence find the ratio of $\frac{y}{x}$ such that the ball does not move from rest.</li>
@@ -59,7 +61,7 @@
     <div class="accordion-panel">
 <ol>
 <li></li>
-<li>Using the chain rule, $$a=\frac{dv}{dt}=\frac{dv}{dr}*\frac{dr}{dt}=v*\frac{dv}{dt}$$</li>
+<li>Using the chain rule, $$a=\frac{dv}{dt}=\frac{dv}{dr}*\frac{dr}{dt}=v*\frac{dv}{dr}$$</li>
 <li>Consider the forces acting on a particle moving on a curved path. Are there any additional forces as compared to a straight path? Would this affect the energy balance of the system?</li>
 </ol>
 </div>
@@ -70,11 +72,22 @@
         <h2>Answer</h2>
     </div>
     <div class="accordion-panel">
-<ol>
-<li></li>
-<li>Infinite time, $\frac{\lambda}{\mu}$ distance</li>
-<li>Work done is $mgx\mu$. Ratio is $\mu$.</li>
-</ol>
+<p>The velocity of the ball follows an exponential decay (as the rate of decrease
+of $v$ is proportional to $v$ itself). Therefore it will take infinite time for
+the ball to become stationary. However, the total distance can be found using
+the chain rule as described in the hints. From there, resolving in the positive
+direction:
+$$\begin{aligned}
+F &amp;= -\lambda v \\
+m a &amp;= -\lambda v \\
+m v \frac{dv}{dr} &amp;= -\lambda v \\
+m\, dv &amp;= -\lambda \, dr \\
+\int_u^0{m\, dv} &amp;= \int_0^D{-\lambda \, dr} \\
+-m u &amp;= -\lambda D \\
+D &amp;= \frac{m u}{\lambda}
+\end{aligned}$$
+Infinite time, $\frac{mu}{\lambda}$ distance</p>
+<p>Work done is $mgx\mu$. Ratio is $\mu$.</p>
 </div>
 </div>
 <link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">

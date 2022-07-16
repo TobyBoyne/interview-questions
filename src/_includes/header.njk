@@ -1,33 +1,27 @@
 {% set navs = [
     {
         name: 'Home',
-        url: '/',
+        url: '/'
     },
     {
         name: 'All Questions',
-        url: '/questions/',
+        url: '/questions/'
     },
     {
         name: 'Playlists',
-        url: '/playlists/',
+        url: '/playlists/'
     },
     {
         name: 'All Tags',
-        url: '/tags/',
+        url: '/tags/'
     },
     {
         name: 'Contributing',
-        url: '/contributing/',
+        url: '/contributing/'
     }
 ] %}
-
 <nav class="site-nav">
-    {# <a href="{{'/' | url}}">Home</a>
-    <a href="{{'/questions/' | url}}" class="{{'active' if page.url == '/questions/'}}">All Questions</a>
-    <a href="{{'/playlists/' | url}}">Playlists</a>
-    <a href="{{'/tags/' | url}}">All Tags</a>
-    <a href="{{'/contributing/' | url}}">Contributing</a> #}
-    {% for nav in navs %}
-        <a href="/">Here!</a>
-    {% endfor %}
+{% for nav in navs %}
+<a href="{{nav.url | url}}" class="{{'active-nav' if page.url == nav.url}}"> {{nav.name}} </a>
+{% endfor %}
 </nav>

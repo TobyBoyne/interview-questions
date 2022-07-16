@@ -9,7 +9,7 @@ description: "An introduction to the Jacobian"
 
 {% block question %}
  1. Evaluate $ \iint \\, dx \\, dy $ over the unit square.
- 2. Evaluate $
+ 2. Evaluate 
 {% endblock question %}
 
 {% block hints %}

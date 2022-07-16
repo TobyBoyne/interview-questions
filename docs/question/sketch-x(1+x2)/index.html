@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Power Matching | Interview Questions</title>
+    <title>Sketch x/(1+x^2) | Interview Questions</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,20 +37,26 @@
 <p><a href="/interview-questions/contributing/" class=""> Contributing </a></p>
 </nav>
 <main>
-<h1>Power Matching</h1>
+<h1>Sketch x/(1+x^2)</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tag/question">question</a>
-    <a class= "badge tag-physics" href="/interview-questions/tag/physics">physics</a>
+    <a class= "badge tag-maths" href="/interview-questions/tag/maths">maths</a>
     <a class= "badge tag-short" href="/interview-questions/tag/short">short</a>
+    <a class= "badge tag-graph" href="/interview-questions/tag/graph">graph</a>
 </div>
 <div class="question">
     <h2>Question</h2>
-<p>Consider two resistors in series: a resistor with a value $R$, and a load resistor with value $R_L$. A voltage is applied across the series combination. What value of $R_L$ maximises the power dissipated in the load resistor, in terms of $R$?</p>
+<p>Sketch the following curve,
+$$ y = \frac{x}{1+x^2} $$
+also giving the turning points.</p>
 </div> <br>
 <div class="hints">
     <div class="accordion">
         <h2>Hints</h2>
     </div>
     <div class="accordion-panel">
+<p>The turning points can be found with differentiation. However, they can also
+be calculated by considering where the curve intersects with the line $y=c$,
+where $c$ is a constant.</p>
 </div>
 </div>
 <br>
@@ -59,15 +65,18 @@
         <h2>Answer</h2>
     </div>
     <div class="accordion-panel">
-<p>To find the maximum power dissipated in the resistor, $P$, we need to find an expression for $P$ in terms of $R_L$, and then differentiate. Note that finding the <em>maximum</em> of $P$ is equivalent to finding the <em>minimum</em> of $\frac{1}{P}$, which is an easier calculation in this case.<br>
-$$ I = \frac{V}{R+R_L} $$
-$$ P = VI = V^2 \frac{R_L}{(R+R_L)^2} $$
-$$ \frac{1}{P} = \frac{1}{V^2} \left(\frac{R^2 + 2RR_L + R_L^2}{R_L}\right) $$
-$$ \frac{1}{P} = \frac{1}{V^2} \left(\frac{R^2}{R_L} + 2R + R_L\right) $$
-$$ \frac{d}{dR_L} \left(\frac{1}{P}\right) = \frac{1}{V^2} \left(-\frac{R^2}{R_L^2}+1\right)=0 $$
-$$ 1 - \frac{R^2}{R_L^2} = 0 $$
-$$ R_L = R $$<br>
-Therefore to maximise the power across the load, the load resistor should be equal to the resistor $R$. This effect is called 'Power Matching'.</p>
+<p>To sketch the curve, first note that $f(x)=-f(x)$, so the curve is
+anti-symmetrical about the origin. Also, find that $f(0)=0$, and
+$\lim_{x\to\infty}f(x)=0$.</p>
+<p>The turning point can be found by setting $\frac{x}{1+x^2}=c$, rearranging to
+$$ c x^2 - x + c = 0 $$
+This equation has exactly one solution when the line $y=c$ passes through the
+turning point, and so the discriminant must be equal to 0. Therefore
+$$ \begin{aligned}
+1 - 4c^2 &amp;= 0 \\
+c &amp;= \pm \frac{1}{2} \\
+x &amp;= \pm 1
+\end{aligned}$$</p>
 </div>
 </div>
 <link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
