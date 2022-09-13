@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Braking Distance | Interview Questions</title>
+    <title>Designing a Windmill | Interview Questions</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,25 +37,28 @@
 <p><a href="/interview-questions/contributing/" class=""> Contributing </a></p>
 </nav>
 <main>
-<h1>Braking Distance</h1>
+<h1>Designing a Windmill</h1>
 <div class="tags"><a class= "badge tag-question" href="/interview-questions/tag/question">question</a>
     <a class= "badge tag-physics" href="/interview-questions/tag/physics">physics</a>
-    <a class= "badge tag-short" href="/interview-questions/tag/short">short</a>
+    <a class= "badge tag-calculus" href="/interview-questions/tag/calculus">calculus</a>
 </div>
 <div class="question">
     <h2>Question</h2>
-<p>If you're driving at 30mph, see a bollard and brake. You stop <em>just</em> before hitting
-the bollard. If instead you were initially travelling at 35mph, how fast would
-you be moving when you hit the bollard? Attempt to estimate the answer without
-a calculator.</p>
+<p>Windmills tend to have 3 blades. Why is this?</p>
+<p>The speed of air through a windmill is the average of the speed of air into
+the turbine and the speed of air exiting the turbine, $v_{mid}=\frac{v_{in}+v_{out}}{2}$.
+By considering the mass of air through the windmill, and the change in kinetic
+energy, find an estimate for the most efficient ratio $r=v_{out}/v_{in}$.</p>
 </div> <br>
 <div class="hints">
     <div class="accordion">
         <h2>Hints</h2>
     </div>
     <div class="accordion-panel">
-<p>Assume that the breaks are applying a constant force in both instances.
-This can be solved using either <em>suvat</em> equations, or conservation of energy.</p>
+<p>The mass through the turbine can be found by considering the conservation of mass.
+For a constant cross sectional area (i.e. the cross-section of the turbine blades),
+the mass flow rate is a factor of the speed $v_{mid}$. That is, if the speed of
+the air is halved, then the mass flow rate through the turbine is halfed.</p>
 </div>
 </div>
 <br>
@@ -64,24 +67,26 @@ This can be solved using either <em>suvat</em> equations, or conservation of ene
         <h2>Answer</h2>
     </div>
     <div class="accordion-panel">
-<p>The problem is time-independent. Therefore, you can use the following equation:
-$$ v^2 = u^2 + 2as $$
-The $2as$ term is constant, as the distance between the driver and the bollard,
-$s$, and the acceleration (braking force) are constant.</p>
-<p>Rearranging for $2as$ and equating the two cases gives
-$$ \begin{aligned}
-v_1^2 - u_1^2 &amp;= v_2^2 - u_2^2 \\
-(30)^2 - (0)^2 &amp;= (35)^2 - u_2^2 \\
-u_2 &amp;= \sqrt{(35)^2 - (30)^2}
-\end{aligned}$$</p>
-<p>A calculator can be used to find an exact answer. However, to quickly estimate
-the value of $u_2$, the difference of two squares can be used:
-$$ \begin{aligned}
-\sqrt{(35)^2 - (30)^2} &amp;= \sqrt{(35-30)(35+30)} \\
-&amp;= \sqrt{5 \cdot 75} \\
-&amp;= \sqrt{375}
-\end{aligned}$$</p>
-<p>Since $19^2 &lt; 375 &lt; 20^2 $, the answer is approximately $19.5\text{ mph}$ .</p>
+<p>There are two competing factors when designing a windmill:</p>
+<ol>
+<li>Mass flow rate needs to be <em>maximised</em>, to increase the amount of energy
+input to the windmill.</li>
+<li>Energy extraction efficiency needs to be <em>maximised</em>, meaning the energy of
+the output airflow - and therefore the output velocity - need to be <em>minimised</em>.</li>
+</ol>
+<p>These two competing factors mean that the number of turbine blades is a <em>compromise</em>
+between extracting energy, and allowing mass to flow.</p>
+<p>The factor by which the mass flow rate is reduced is given by
+$$v_{mid} = \frac{v_{in}}{2} (1 + r)$$</p>
+<p>The energy extracted per unit mass by the turbine is given by
+$$\frac{E}{\dot m} =\frac{1}{2} (v_{in}^2-v_{out}^2) \propto v_{in}^2(1-r^2)$$</p>
+<p>The total efficiency is given by the product of these two terms. Differentiate
+and set to zero to find the maximum efficiency is achieved at $r=\frac{1}{3}$.</p>
+<p>Video explanations by Minute Physics</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=CI-bwqhhTTw">Peak efficiency</a></li>
+<li><a href="https://www.youtube.com/watch?v=WGKIjojADmg">Windmill design</a></li>
+</ul>
 </div>
 </div>
 <link rel="stylesheet" href="/interview-questions/assets/css/accordion.css">
